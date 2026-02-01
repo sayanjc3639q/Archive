@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Living Archive</title>
+    <meta name="description"
+        content="A personal archive of thought, time, and memory. Developed for longevity and clarity.">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+
+
+
+    <!-- MOBILE HEADER -->
+    <header class="mobile-header">
+        <span class="mobile-logo">
+            <i data-feather="archive" class="mobile-logo-icon"></i>
+            The Archive
+        </span>
+        <button id="mobile-theme-toggle" class="mobile-theme-btn">
+            <span class="icon-sun"><i data-feather="sun"></i></span>
+            <span class="icon-moon"><i data-feather="moon"></i></span>
+        </button>
+    </header>
+
+    <div class="app-layout">
+        <!-- LEFT SIDEBAR (Desktop Only) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="#/" class="site-title">
+                    <i data-feather="archive" class="site-logo"></i>
+                    The Archive
+                </a>
+                <p class="site-subtitle">Living Memory</p>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="#/blog" data-link="blog">
+                            <i data-feather="edit-3"></i>
+                            <span>Daily Blogs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/thoughts" data-link="thoughts">
+                            <i data-feather="wind"></i>
+                            <span>Thoughts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/life" data-link="life">
+                            <i data-feather="clock"></i>
+                            <span>Life Incidents</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/about" data-link="about">
+                            <i data-feather="info"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-widget">
+                <h3>
+                    <i data-feather="star"></i>
+                    Latest Entries
+                </h3>
+                <ul id="sidebar-latest" class="widget-list">
+                    <!-- Injected by JS -->
+                    <li style="color: #999; font-size: 0.8rem;">Loading...</li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <span class="icon-sun"><i data-feather="sun"></i></span>
+                    <span class="icon-moon"><i data-feather="moon"></i></span>
+                    <span class="theme-text">Theme</span>
+                </button>
+                <div class="footer-info" style="margin-top: 1.5rem; opacity: 0.7; font-size: 0.8rem;">
+                    <p>© <span id="year"></span> Sayan Maity</p>
+                    <p style="margin-top: 0.2rem;">All rights reserved</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main id="main-scroll-area">
+            <div id="app-root" class="content-wrapper">
+                <!-- Application content will be injected here by app.js -->
+                <div class="loading-state">
+                    Loading Archive...
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <!-- MOBILE BOTTOM NAV -->
+    <nav class="mobile-nav">
+        <a href="#/" class="mobile-link" data-link="home">
+            <span class="m-icon"><i data-feather="home"></i></span>
+            <span class="m-label">Home</span>
+        </a>
+        <a href="#/blog" class="mobile-link" data-link="blog">
+            <span class="m-icon"><i data-feather="edit-2"></i></span>
+            <span class="m-label">Blogs</span>
+        </a>
+        <a href="#/thoughts" class="mobile-link" data-link="thoughts">
+            <span class="m-icon"><i data-feather="wind"></i></span>
+            <span class="m-label">Thoughts</span>
+        </a>
+        <a href="#/life" class="mobile-link" data-link="life">
+            <span class="m-icon"><i data-feather="clock"></i></span>
+            <span class="m-label">Life</span>
+        </a>
+    </nav>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
