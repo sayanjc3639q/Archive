@@ -43,5 +43,17 @@
         ]
         
 
+    },
+    {
+        "id": "2026-02-01-casual1",
+        "title": "Beging Casual",
+        "date": "2026-01-28",
+        "time": "03:28",
+        "featured": false,
+        "content":[
+            
+        ]
+        
+
     }
 ]
