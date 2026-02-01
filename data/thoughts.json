@@ -1,0 +1,266 @@
+[
+    {
+        "id": "climate-data-analysis",
+        "title": "Climate Change: A Data-Driven Analysis",
+        "date": "2026-02-01",
+        "time": "07:20",
+        "featured": true,
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Climate change is no longer a distant threat—it's a present reality backed by overwhelming scientific evidence. Let's examine the data that tells this story."
+            },
+            {
+                "type": "paragraph",
+                "text": "The relationship between atmospheric CO₂ concentration and global temperature can be modeled using a logarithmic function:"
+            },
+            {
+                "type": "equation",
+                "latex": "ΔT = λ × ln(C/C₀)",
+                "caption": "Temperature change as a function of CO₂ concentration, where λ is climate sensitivity (~3°C)"
+            },
+            {
+                "type": "paragraph",
+                "text": "Historical data shows a clear correlation between CO₂ levels and temperature anomalies:"
+            },
+            {
+                "type": "table",
+                "headers": [
+                    "Year",
+                    "CO₂ (ppm)",
+                    "Temp Anomaly (°C)",
+                    "Sea Level Rise (mm)"
+                ],
+                "rows": [
+                    [
+                        "1960",
+                        "316.91",
+                        "+0.03",
+                        "0"
+                    ],
+                    [
+                        "1980",
+                        "338.75",
+                        "+0.26",
+                        "48"
+                    ],
+                    [
+                        "2000",
+                        "369.55",
+                        "+0.61",
+                        "102"
+                    ],
+                    [
+                        "2020",
+                        "412.44",
+                        "+1.02",
+                        "178"
+                    ],
+                    [
+                        "2025",
+                        "425.12",
+                        "+1.28",
+                        "215"
+                    ]
+                ],
+                "caption": "Global climate indicators over 65 years (baseline: 1951-1980 average)"
+            },
+            {
+                "type": "paragraph",
+                "text": "The rate of temperature increase has accelerated dramatically. Here's the decadal temperature change:"
+            },
+            {
+                "type": "chart",
+                "chartType": "bar",
+                "data": [
+                    {
+                        "label": "1960s",
+                        "value": 0.05
+                    },
+                    {
+                        "label": "1970s",
+                        "value": 0.08
+                    },
+                    {
+                        "label": "1980s",
+                        "value": 0.18
+                    },
+                    {
+                        "label": "1990s",
+                        "value": 0.31
+                    },
+                    {
+                        "label": "2000s",
+                        "value": 0.54
+                    },
+                    {
+                        "label": "2010s",
+                        "value": 0.82
+                    },
+                    {
+                        "label": "2020s",
+                        "value": 1.15
+                    }
+                ],
+                "caption": "Average global temperature anomaly by decade (°C above baseline)"
+            },
+            {
+                "type": "paragraph",
+                "text": "The greenhouse effect can be quantified using the Stefan-Boltzmann law:"
+            },
+            {
+                "type": "equation",
+                "latex": "E = σ × T⁴",
+                "caption": "Radiated energy where σ = 5.67×10⁻⁸ W/(m²·K⁴)"
+            },
+            {
+                "type": "paragraph",
+                "text": "Global carbon emissions by sector reveal where our efforts must focus:"
+            },
+            {
+                "type": "chart",
+                "chartType": "pie",
+                "data": [
+                    {
+                        "label": "Energy",
+                        "value": 35
+                    },
+                    {
+                        "label": "Industry",
+                        "value": 21
+                    },
+                    {
+                        "label": "Transportation",
+                        "value": 16
+                    },
+                    {
+                        "label": "Buildings",
+                        "value": 12
+                    },
+                    {
+                        "label": "Agriculture",
+                        "value": 11
+                    },
+                    {
+                        "label": "Other",
+                        "value": 5
+                    }
+                ],
+                "caption": "Global CO₂ emissions by sector (percentage of total)"
+            },
+            {
+                "type": "paragraph",
+                "text": "The data is unambiguous: we are in a climate emergency. The question is no longer whether climate change is real, but whether we have the collective will to act on what the numbers are telling us."
+            },
+            {
+                "type": "paragraph",
+                "text": "Every fraction of a degree matters. Every policy decision counts. The science is clear—now we need the action to match."
+            }
+        ]
+    },
+    {
+        "id": "quantum-entanglement-notes",
+        "title": "Notes on Quantum Entanglement",
+        "date": "2026-02-01",
+        "time": "07:04",
+        "featured": true,
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Quantum entanglement remains one of the most fascinating phenomena in modern physics. When two particles become entangled, measuring the state of one instantaneously affects the state of the other, regardless of the distance separating them."
+            },
+            {
+                "type": "paragraph",
+                "text": "Einstein famously called this 'spooky action at a distance,' yet it has been experimentally verified countless times. The mathematical framework is elegant:"
+            },
+            {
+                "type": "equation",
+                "latex": "|Ψ⟩ = (1/√2)(|↑↓⟩ - |↓↑⟩)",
+                "caption": "Bell state representing maximally entangled spin-1/2 particles"
+            },
+            {
+                "type": "paragraph",
+                "text": "This represents a singlet state where the two particles have opposite spins. The beauty lies in the superposition—neither particle has a definite spin until measured."
+            },
+            {
+                "type": "paragraph",
+                "text": "Recent experiments have demonstrated entanglement over increasingly large distances. Here's a summary of key milestones:"
+            },
+            {
+                "type": "table",
+                "headers": [
+                    "Year",
+                    "Distance",
+                    "Method",
+                    "Team"
+                ],
+                "rows": [
+                    [
+                        "2017",
+                        "1,203 km",
+                        "Satellite (Micius)",
+                        "Chinese Academy of Sciences"
+                    ],
+                    [
+                        "2020",
+                        "50 km",
+                        "Fiber optic",
+                        "Delft University"
+                    ],
+                    [
+                        "2022",
+                        "33 km",
+                        "Free space",
+                        "MIT"
+                    ],
+                    [
+                        "2025",
+                        "10,000 km",
+                        "Satellite network",
+                        "ESA/NASA Joint"
+                    ]
+                ],
+                "caption": "Major quantum entanglement distance records"
+            },
+            {
+                "type": "paragraph",
+                "text": "The implications for quantum computing and cryptography are profound. A quantum computer leveraging entanglement can solve certain problems exponentially faster than classical computers."
+            },
+            {
+                "type": "equation",
+                "latex": "H = -∑ᵢ pᵢ log₂(pᵢ)",
+                "caption": "Shannon entropy—measuring information content in quantum states"
+            },
+            {
+                "type": "paragraph",
+                "text": "What strikes me most is how this challenges our intuition about locality and causality. The universe operates on principles that seem impossible, yet they are mathematically rigorous and experimentally validated."
+            }
+        ]
+    },
+    {
+        "id": "on-simplicity",
+        "title": "On Digital Simplicity",
+        "date": "2026-01-30",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Simplicity is not the absence of complexity, but the mastery of it. In a world of infinite scroll and algorithmic noise, a static JSON file is an act of rebellion."
+            }
+        ]
+    },
+    {
+        "id": "velocity-of-learning",
+        "title": "The Velocity of Learning",
+        "date": "2026-01-28",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "We often confuse the consumption of information with the acquisition of knowledge. Reading a tutorial is speed; building the thing is velocity. One has direction and magnitude."
+            },
+            {
+                "type": "paragraph",
+                "text": "I realized today that I've been running on a treadmill of tutorials. It's time to step off and walk on solid ground, even if it's slower."
+            }
+        ]
+    }
+]
