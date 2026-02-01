@@ -19,6 +19,11 @@
                 "text": "<blockquote>\"You already have wasted that much time so dont worry invest some more and make it happen\"</blockquote>"
             },
             {
+                "type": "image",
+                "url": "https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg",
+                "caption": "A clean workspace for clear thoughts."
+            },
+            {
                 "type": "paragraph",
                 "text": "The the first apperence didn't fascinate me, but it is better to do something than nothing. So here it is, a simple archive built with just HTML, CSS, and JSON files. <em>Simple. Static. Sufficient.</em>, initially I do not foucus on the responsiveness. I am just adding elemetns and features to it. after all these thing came to work I work on the responsiveness. Now I connected the git reposity and will push the changes."
             },
