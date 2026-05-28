@@ -1,0 +1,58 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper: Checks if the user is signed in
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    // Helper: Checks if the signed-in user is the administrator Sayan (case-insensitive)
+    function isAdmin() {
+      return isSignedIn() 
+        && request.auth.token.email.lower() == 'jcsayan7@gmail.com';
+    }
+
+    // --- BLOGS, THOUGHTS, AND LIFE INCIDENTS COLLECTIONS ---
+    // Rules allow the admin full control, and authenticated users to update ONLY the likesCount field.
+    match /blogs/{blogId} {
+      allow read: if true;
+      allow create, delete: if isAdmin();
+      allow update: if isAdmin() 
+        || (isSignedIn() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likesCount']));
+    }
+    
+    match /thoughts/{thoughtId} {
+      allow read: if true;
+      allow create, delete: if isAdmin();
+      allow update: if isAdmin() 
+        || (isSignedIn() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likesCount']));
+    }
+    
+    match /lifeIncidents/{incidentId} {
+      allow read: if true;
+      allow create, delete: if isAdmin();
+      allow update: if isAdmin() 
+        || (isSignedIn() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likesCount']));
+    }
+
+    // --- LIKES COLLECTION ---
+    // Documents are keyed by `${userId}_${entryId}`
+    match /likes/{likeId} {
+      allow read: if true;
+      allow create: if isSignedIn() 
+        && request.resource.data.userId == request.auth.uid;
+      allow delete: if isAdmin() 
+        || (isSignedIn() && resource.data.userId == request.auth.uid);
+    }
+
+    // --- SAVES / BOOKMARKS COLLECTION ---
+    // Documents are keyed by `${userId}_${entryId}`
+    match /saves/{saveId} {
+      allow read: if isAdmin() 
+        || (isSignedIn() && request.auth.uid == resource.data.userId);
+      allow write: if isAdmin() 
+        || (isSignedIn() && (request.auth.uid == resource.data.userId || request.auth.uid == request.resource.data.userId));
+    }
+  }
+}

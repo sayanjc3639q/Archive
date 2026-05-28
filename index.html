@@ -7,9 +7,29 @@
     <title>Living Archive</title>
     <meta name="description"
         content="A personal archive of thought, time, and memory. Developed for longevity and clarity.">
+    <link rel="canonical" id="seo-canonical" href="">
+
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Living Archive">
+    <meta property="og:description" content="A personal archive of thought, time, and memory. Developed for longevity and clarity.">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Living Archive">
+    <meta name="twitter:description" content="A personal archive of thought, time, and memory. Developed for longevity and clarity.">
+    <meta name="twitter:image" content="">
 
     <!-- Styles -->
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/cms.css">
+
+    <!-- Firebase Compatibility SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
     <!-- Favicon -->
     <link rel="icon"
@@ -66,25 +86,26 @@
                             <span>Life Incidents</span>
                         </a>
                     </li>
+                    <li id="nav-bookmarks-li" class="hidden">
+                        <a href="#/bookmarks" data-link="bookmarks">
+                            <i data-feather="bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
                     <li>
                         <a href="#/about" data-link="about">
                             <i data-feather="info"></i>
                             <span>About</span>
                         </a>
                     </li>
+                    <li id="nav-auth-li">
+                        <a href="#/login" data-link="login" id="nav-auth-btn">
+                            <i data-feather="user"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-
-            <div class="sidebar-widget">
-                <h3>
-                    <i data-feather="star"></i>
-                    Latest Entries
-                </h3>
-                <ul id="sidebar-latest" class="widget-list">
-                    <!-- Injected by JS -->
-                    <li style="color: #999; font-size: 0.8rem;">Loading...</li>
-                </ul>
-            </div>
 
 
             <div class="sidebar-footer">
@@ -104,8 +125,15 @@
         <main id="main-scroll-area">
             <div id="app-root" class="content-wrapper">
                 <!-- Application content will be injected here by app.js -->
-                <div class="loading-state">
-                    Loading Archive...
+                <div class="skeleton-container" id="app-skeleton">
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-meta"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                    <div class="skeleton-image"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
                 </div>
             </div>
         </main>
@@ -123,18 +151,44 @@
             <span class="m-icon"><i data-feather="edit-2"></i></span>
             <span class="m-label">Blogs</span>
         </a>
-        <a href="#/thoughts" class="mobile-link" data-link="thoughts">
-            <span class="m-icon"><i data-feather="wind"></i></span>
-            <span class="m-label">Thoughts</span>
+        <a href="#/bookmarks" class="mobile-link hidden" data-link="bookmarks" id="mobile-bookmarks-btn">
+            <span class="m-icon"><i data-feather="bookmark"></i></span>
+            <span class="m-label">Saved</span>
         </a>
-        <a href="#/life" class="mobile-link" data-link="life">
-            <span class="m-icon"><i data-feather="clock"></i></span>
-            <span class="m-label">Life</span>
+        <a href="#/login" class="mobile-link" data-link="login" id="mobile-auth-btn">
+            <span class="m-icon"><i data-feather="user"></i></span>
+            <span class="m-label">Login</span>
         </a>
     </nav>
 
+    <!-- Firebase configuration & bridge -->
+    <script src="script/firebase-config.js"></script>
+    <script src="script/firebase.js"></script>
+
     <!-- Application Script -->
     <script src="script/app.js"></script>
+    <!-- Search Engine Crawler Index Link Map (Hidden from User View, for SEO Discovery) -->
+    <nav style="display:none !important;" aria-hidden="true">
+        <!-- Daily Blogs -->
+        <a href="#/blog/2026-02-01-morning-reflections">Dawn Reflections on Creativity</a>
+        <a href="#/blog/2026-02-01-bad-moods">Bad MOODs</a>
+        <a href="#/blog/2026-02-01-casual1">Beging Casual</a>
+
+        <!-- Thoughts -->
+        <a href="#/thoughts/climate-data-analysis">Climate Change: A Data-Driven Analysis</a>
+        <a href="#/thoughts/quantum-entanglement-notes">Notes on Quantum Entanglement</a>
+        <a href="#/thoughts/on-simplicity">On Digital Simplicity</a>
+        <a href="#/thoughts/velocity-of-learning">The Velocity of Learning</a>
+
+        <!-- Life Incidents -->
+        <a href="#/life/the-first-computer">The First Encounter with Silicon</a>
+        <a href="#/life/train-to-nowhere">The Train to Nowhere</a>
+        <a href="#/life/internet-died">The Day the Internet Died</a>
+        <a href="#/life/building-the-cabin">Building the Cabin</a>
+        <a href="#/life/lost-year">The Lost Year</a>
+        <a href="#/life/crossing-ocean">Crossing the Ocean</a>
+    </nav>
+
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 

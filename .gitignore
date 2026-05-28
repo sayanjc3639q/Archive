@@ -1,0 +1,12 @@
+# Local configuration secrets
+script/firebase-config.js
+.env
+.env.local
+
+# Node dependencies
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
